@@ -1,4 +1,4 @@
-package com.wellsfargo.counselor;
+package com.wellsfargo.entity;
 
 public class Client {
     private int id;
@@ -26,11 +26,24 @@ public class Client {
     }
 
     // Setters
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "Client{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 }
